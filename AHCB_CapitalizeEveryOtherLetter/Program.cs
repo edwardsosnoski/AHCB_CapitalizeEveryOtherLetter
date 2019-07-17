@@ -18,6 +18,12 @@ namespace AHCB_CapitalizeEveryOtherLetter
 
             for (int i = 0; i < userInput.Length; i++)
             {
+                if(!(Char.IsLetter(userInput[i])))
+                {
+                    capitalizeEveryOtherLetter.Append(userInput[i].ToString());
+                    continue;
+                }
+
                 if(i % 2 == 0)
                 {
                     string lowercaseLetter = userInput[i].ToString().ToLower();
